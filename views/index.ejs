@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EmpowerBharat- Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400" rel='stylesheet' type='index/css'>
+  <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="css/hover.css" rel="stylesheet" media="all">
+  <link href="/css/style.css" rel="stylesheet">
+  
+
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <div class="logo">
+      
+      <a href="/"><img src="/img/logo.png" alt="" class="img-fluid" style="max-height: 72px;"></a>
+      
+      
+    </div>
+    
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto active" href="/">Home</a></li>
+        <li><a class="nav-link scrollto" href="/startups">Startups</a></li>
+        <li><a class="nav-link scrollto" href="/investors">Investors</a></li>
+        <li><a class="nav-link scrollto" href="/featured">Featured</a></li>
+        <li><a class="nav-link scrollto" href="/schools_colleges">Stories</a></li>
+        <li><a class="nav-link scrollto" href="/learn">Learn</a></li>
+        <% if(locals.user){ %>
+          <% if(locals.user.companyName){ %>
+            <li><a class="nav-link scrollto" href="/startup_db"><span style="color: #957DAD;"> Profile  </span></a></li>
+            <li><a class="nav-link scrollto" href="/startup/sign-out"><span style="color: #957DAD;"> Sign Out  </span></a></li>
+            <% }else{ %>
+              <li><a class="nav-link scrollto" href="/investor_db"><span style="color: #957DAD;"> Profile  </span></a></li>
+              <li><a class="nav-link scrollto" href="/investor/sign-out"><span style="color: #957DAD;"> Sign Out </span></a>
+              </li>
+            <% } %>
+        <% }else{ %>
+              <li><a class="nav-link scrollto" href="/login"><span style="color: #0A0A55;">Sign In</span></a></li>
+            <% } %>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="/img/slide/welcome3.jpg" alt="" style="  max-width: 100%; opacity: 0.7;"></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>EmpowerBharat !</span></h2>
+                <h5 class="animate__animated animate__fadeInUp"  style="color: #fff" >Defining change, taking rural indian startups and entrepreneurs global </h5>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto"> Get Started </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="/img/slide/welcome4.jpg" alt="" style=" width: 100%; opacity: 0.6; "></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Are you a startup ?</h2>
+                <h5 class="animate__animated animate__fadeInUp" style="color: #fff">Wanna take your business global, need funds ? Turn your business ambitions real. Welcome to EmpowerBharat !</h5>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="/img/slide/investart_auto_x2.jpg" alt="" style=" width: 100%; opacity: 0.6; "></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Are you an Investor?</h2>
+                <h5 class="animate__animated animate__fadeInUp"  style="color: #fff" > Wanna explore the untapped real india ? Wanna invest in real india, help indian businesses rise. Welcome to EmpowerBharat ! </h5>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
+        </a> -->
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about" style="padding-bottom: 10px;">
+      <div class="container">
+        <div class="section-title">
+          <!-- <div class="animate__animated animate__fadeInRight"> -->
+          <h2 >About Us</h2>
+          <p style="  text-align: justify; text-justify: inter-word;">Today the world enjoys urban India’s built products and brands enjoy a mutually accessible ecosystem and it is a matter of a few clicks, swipes or at best, phone calls that EmpowerBharat the gap in accessing all their requirements. However, for our fellow citizens residing in over 650,000 villages in India, it is a daily struggle,from seeking loans for their businesses from banks or to provide wider reach to their products. They continue to remain widely left out and inaccessible, making it tough for them to take their business global and investors also find it hard to serve them. Rural commerce continues to be driven by trust, relationships and physical interactions. Adding a layer of digital, unlocks its true potential to create sustainable business solutions and livelihoods at global scale.
+            Through EmpowerBharat, we embark on a mission to paint this very own canvas and change the narrative for India’s rural population by opening them to global markets digitally and connecting their products to global investors who can help and fund them to grow. It is indeed an opportune time for everyone involved as the Indian rural marketplace is ready for disruption. Welcome to the exciting and extremely fulfilling journey of change and growth . 
+          </p>
+        <!-- </div> -->
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+     <!-- ======= Our Services Section ======= -->
+     <section id="services" class="services" style="padding-top:0px;">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Features</h2>
+          <p>Showcase your business all over the world, meet investors, seek mentorship and funds...and fly high without any barrier ! 🚀🚀🚀</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="">Wider Reach</a></h4>
+              <p class="description">
+                Our simplified technology platform, EmpowerBharat helps rural entrepreneur to showcase their business products on a world stage and have a wider reach and allows them to reach each and every potential customer. </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-person-lines-fill"></i></div>
+              <h4 class="title"><a href="">Business Mentorship</a></h4>
+              <p class="description">Our platfrom provides mentorship to helps budding startups to get right mentorship from the experts in the fields to grow leaps and bounds and access and engage global markets through network of our investors and partners.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h4 class="title"><a href="">Raise Funds</a></h4>
+              <p class="description">Bridging the gap between rural startup and investors, EmpowerBharat allows startups to raise funds through potential investors and allows transactions on ground-level to every individual in rural India.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Learn</a></h4>
+              <p class="description">EmpowerBharat also empowers the startups and investors both by making them aware about latest Learn, rules and regulations and helps them to make most of them to their benefit.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Highlights</h2>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box" style="margin-top:10px;">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Rural Entrepreneurs</strong> got fundings to grow their startups and take them global. </p>
+              <!-- <a href="#">Find out more &raquo;</a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box" style="margin-top:10px;">
+              <i class="bi bi-building"></i>
+              <span data-purecounter-start="0" data-purecounter-end="919" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Startups</strong> got opportunities and wider reach to take their made in bharat product global.</p>
+              <!-- <a href="#">Find out more &raquo;</a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box" style="margin-top:10px;">
+              <i class="bi bi-bar-chart-line-fill"></i>
+              <span data-purecounter-start="0" data-purecounter-end="102" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Investors</strong> got positive returns through their investment on platform and deep insights of indian markets at root level.</p>
+              <!-- <a href="#">Find out more &raquo;</a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box" style="margin-top:10px;">
+              <i class="bi bi-broadcast"></i>
+              <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Learn</strong> were availed by beneficiaries to best of their benefit after becoming aware about them through the platform.  </p>
+              <!-- <a href="#">Find out more &raquo;</a> -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+   
+
+    <!-- ======= Cta Section ======= -->
+    <!-- <section class="cta">
+      <div class="container">
+
+        <div class="text-center">
+          <h3>List your Startup Now!</h3>
+          <p> Whether you’re starting out, or scaling to meet demand, connect with the right people, products, and best practices to help your startup grow.</p>
+          <a class="cta-btn" href="/signup/startup">Register</a>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Cta Section -->
+
+    <!-- ======= More Services Section ======= -->
+    <section class="more-services section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Latest News</h2>
+        </div> 
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="card zoom">
+              <img src="/img/ruralimg/chattisgarh.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Story of Change</a></h5>
+                <p class="card-text">Chhattisgarh's Bihan initiative has changed life for Geeta Kushawaha, and now she is inspiring others</p>
+                <a href="https://yourstory.com/2018/09/chhattisgarhs-bihan-initiative-changed-life-geeta-kushawaha-now-inspiring-others/amp" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="card zoom">
+              <img src="/img/ruralimg/vilcart3.png" class="card-img-top" alt="..." style="margin-bottom : 35px; margin-top :35px;">
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Vilcart</a></h5>
+                <p class="card-text">Rural commerce startup VilCart says eyeing Rs 1,250 Cr in turnover next FY : CEO Prasanna Kumar</p>
+                <a href="https://yourstory.com/2022/03/rural-commerce-startup-vilcart-eyeing-1250-crore-in-revenue-business-outlook/amp" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="card zoom">
+              <img src="/img/ruralimg/women2.jpeg" class="card-img-top" alt="..." style="margin-top: 30px;">
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Tech Boost</a></h5>
+                <p class="card-text">How better eyes with tech can give National Rural Livelihood Mission more legs</p>
+                <a href="https://yourstory.com/socialstory/2022/05/national-rural-livelihood-mission-technology-government/amp?utm_pageloadtype=scroll" class="btn">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End More Services Section -->
+
+    <!-- ======= Info Box Section ======= -->
+    <section id="info-box" class="info-box py-0">
+      <div class="container-fluid" style="margin-top:5%;margin-bottom:3%;">
+
+        <div class="row">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content" style="padding-top:0px;">
+              <h3><strong>FAQs</strong></h3>
+              <!-- <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+              </p> -->
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> How do investors add value to startups ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Investors particularly venture capitalists (VCs) add value to startups in a lot of ways: <br>1. Stakeholder Management: Investors manage the company board and leadership to facilitate smooth operations of the startup. In addition, their functional experience and domain knowledge of working and investing with startups imparts vision and direction to the company.<br>2. Raising Funds: Investors are best guides for the startup to raise subsequent rounds of funding on the basis of stage, maturity, sector focus etc. and aid in networking and connection for the founders to pitch their business to other investors.<br>3. Recruiting Talent: Sourcing high-quality and best-fit human capital is critical for startups, especially when it comes to recruiting senior executives to manage and drive business goals. VCs, with their extensive network can help bridge the talent gap by recruiting the right set of people at the right time.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Should I raise money? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Depends. If you know that you need capital to take your idea to the next level, then it may be time to consider raising money. If you are trying to raise capital to pay the founders or to hire on a sales guy, then probably not.It’s good practice to keep expenses low and avoid raising money for as long as possible, but you will want to begin looking for capital when you are down to 12-18 months of runway. When you decide its time to begin raising money, you will want to start talking to investors early. The cycle of raising capital often takes longer than entrepreneurs think.
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> How to raise capital / fundings ?
+                    <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      There are a few different ways to get funding for your startup: bootstrapping (your own savings, friends and family), angel investors, venture capital, government loans, government subsidies and crowdfunding. You will need to pick an option based on the maturity of your business, the initiatives or grants available in your location and whether or not you want to rely on outside investors.
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style="background-image: url(/img/faq3.jpg);">&nbsp;</div>
+        </div>
+
+      </div>
+    </section><!-- End Info Box Section -->
+
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+  
+        <div class="section-title">
+          <h2 style="margin-bottom: 10x;">RURAL STARTUPS ON GROWTH</h2>
+          <p>Explore the startups that have grown beyond time to set examples that rural india can rise to best too ! </p>
+        </div>
+  
+        <!-- <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">FinTech</li>
+              <li data-filter=".filter-web">Pharmacy</li>
+              <li data-filter=".filter-card">Technology</li>
+              <li data-filter=".filter-web">Travel</li>
+            </ul>
+          </div>
+        </div> -->
+  
+        <div class="row portfolio-container">
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="text-align: center;">
+            <div class="portfolio-wrap">
+              <img src="/img/ruralimg/vilcart2.jpg" class="img-fluid" alt="" style="width: 80%">
+              <div class="portfolio-info">
+                <h4>VilCart</h4>
+                <p>Rural Commerce Platform</p>
+              </div>
+              <div class="portfolio-links">
+                <!-- <a href="/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
+                <a href="http://vilcart.in/" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            
+          </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" style="text-align: center;">
+            <div class="portfolio-wrap">
+              <img src="/img/startupgramcover.jpg" class="img-fluid" alt="" style="width:50%;">
+              <div class="portfolio-info">
+                <h4>GramCover</h4>
+                <p>AgriTech</p>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://www.gramcover.com/" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            
+          </div>
+  
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" style="text-align: center;">
+            <div class="portfolio-wrap">
+              <img src="/img/startup2.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Samriddhi Bank</h4>
+                <p>Rural Banking Platform</p>
+              </div>
+              <div class="portfolio-links">
+              
+                <a href="http://www.samridhibank.com/" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+            
+          </div>
+    
+          
+        </div>
+  
+      </div>
+    </section><!-- End StartUps Section -->
+
+   
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>INVESTORS TO LOOK OUT FOR</h2>
+          <p>Get mentored and seek funds from investors all around the globe</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="member">
+              <img src="/img/team/team-1.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Alfred</h4>
+                  <span>Chief Financial Officer (CFO), Tiger Capital</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="/img/team/team-3.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="/img/team/team-4.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="/img/team/team-2.png" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <!-- <section id="contact" class="contact section-bg">
+
+      <div class="container" >
+        <div class="section-title" style = "padding-bottom: 10px;">
+          <h2>Contact Us</h2>
+          <p>Are you clueless about how to gear up for your startup? Or Looking for a group to invest your money? If that's the case, You are on correct platform. Contact us for any further queries.</p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-stretch infos">
+            
+            <div class="row">
+              
+              <div class="col-lg-6 info d-flex flex-column align-items-stretch" style="margin-top:10px;">
+                
+                <i class="bx bx-map"></i>
+                <div class="hvr-grow">
+                <h4>Address</h4>
+                <p>Delhi Technological University<br>New Delhi,India</p>
+              </div>
+              </div>
+              <div class="col-lg-6 info info-bg d-flex flex-column align-items-stretch" style="margin-top:10px;">
+                <i class="bx bx-phone"></i>
+                <div class="hvr-grow">
+                  <h4>Call Us</h4>
+                  <p>+91 9876543210</p>
+                </div>
+            
+              </div>
+              <div class="col-lg-6 info info-bg d-flex flex-column align-items-stretch" style="margin-top:10px;">
+                <i class="bx bx-envelope"></i>
+                <div class="hvr-grow">
+                  <h4>Email Us</h4>
+                  <p>contact@empowerbharat.com<br>info@empowerbharat.com</p>
+                </div>
+                
+              </div>
+              <div class="col-lg-6 info d-flex flex-column align-items-stretch" style="margin-top:10px;">
+                <i class="bx bx-time-five"></i> 
+                <div class="hvr-grow">
+                  <h4>Working Hours</h4>
+                  <p>Mon - Fri: 9AM to 5PM</p>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-stretch contact-form-wrap">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                
+                <div class="col-md-6 form-group">
+                  <div>
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                
+              </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" rows="8" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>EmpowerBharat</h3>
+            <p>
+              Delhi Technological University <br>
+              New Delhi, India<br><br>
+              <strong>Phone:</strong> +91 1234567890<br>
+              <strong>Email:</strong> info@EmpowerBharat.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="#hero">Home</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="#services">Features</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="#portfolio">Startups on Growth</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="#info-box">FAQs</a></li>
+            </ul>
+          </div>
+        
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Explore</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="/startups">Startups</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="/investors">Investors</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="/featured">Featured</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="/schools_colleges">Stories to Inspire</a></li>
+              <li><i class="bx bx-chevron-right" style = "color: #FDBC02;"></i> <a href="/learn">Learn</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to stay updated.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;<strong><span> EmpowerBharat</span></strong>
+      </div>
+      <div class="credits">
+        
+        Made by Nikhilesh Jain & Palak Gupta
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
+  <!-- Vendor JS Files -->
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/vendor/php-email-form/validate.js"></script>
+  <script src="/vendor/purecounter/purecounter.js"></script>
+  <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/vendor/waypoints/noframework.waypoints.js"></script>
+  
+
+  <!-- Template Main JS File -->
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>
