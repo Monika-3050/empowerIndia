@@ -29,8 +29,9 @@ module.exports.createSession = function(request,response){
 module.exports.destroySession = function(req,res, next){
     //given to request by passport
     req.logout(function(err) {
+        console.log("Startup signed out")
     if (err) { return next(err); }
-    console.log("Startup signed out")
+  
      return res.redirect('/');
   });
 }
