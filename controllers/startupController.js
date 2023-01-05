@@ -26,12 +26,14 @@ module.exports.createSession = function(request,response){
 }
 
 // ======= sign out ==============
-module.exports.destroySession = function(request,response){
+module.exports.destroySession = function(req,res, next){
     //given to request by passport
-    request.logout();
-    return response.redirect('/');
+    req.logout(function(err) {
+    if (err) { return next(err); }
+    console.log("Startup signed out")
+     return res.redirect('/');
+  });
 }
-
 
 // ======= user-profile-update ==============//
 module.exports.editProfile= async(req,res)=>{
